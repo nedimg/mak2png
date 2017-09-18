@@ -9,17 +9,20 @@ const makiSourceFolder = 'svgs_with_stroke';
 const PIXEL_RATIOS = [1, 2];
 
 // do some preprocessing of maki svgs. Pick wanted icons from `svgs` folder
-// and rename and put into `input` folder 
+// and rename and put into `input` folder
 [
+    { maki: 'building-15', dingo: 'building' },
+    { maki: 'hospital-15', dingo: 'hospital' },
+    { maki: 'rail-15', dingo: 'train' },
     { maki: 'airport-15', dingo: 'airplane' },
     { maki: 'cemetery-15', dingo: 'cemetery' },
     { maki: 'museum-15', dingo: 'museum' },
     { maki: 'park-alt1-15', dingo: 'forest' },
     { maki: 'school-15', dingo: 'school' },
-    { maki: 'circle-15', dingo: 'small_city' },
-    { maki: 'square-15', dingo: 'medium_city' },
-    { maki: 'star-15', dingo: 'capital_city' },
-    { maki: 'triangle-15', dingo: 'major_city' },
+    { maki: 'small-city-15', dingo: 'small_city' },
+    { maki: 'medium-city-15', dingo: 'medium_city' },
+    { maki: 'capital-city-15', dingo: 'capital_city' },
+    { maki: 'major-city-15', dingo: 'major_city' },
 ].forEach(function(makiIcon) {
     const makiIconPath = path.resolve(path.join(__dirname, `${makiSourceFolder}/${makiIcon.maki}.svg`));
     const mappedPath = path.resolve(path.join(__dirname, `input/${makiIcon.dingo}.svg`));
